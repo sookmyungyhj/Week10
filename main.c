@@ -3,22 +3,10 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(void) {
-	
-int i = 10;
-char c = 'a';
+void main(void) {
+int i = 4; //300으로 변경해서도 해보기
+int *pi = &i;
+char *pc = &i;
 
-int *iptr; //정수형 포인터 변수 iptr 선언;
-char *cptr; //문자형 포인터 변수 cptr 선언;
-int *iptr2; //정수형 포인터 변수 iptr2 선언; 
-
-iptr = &i; //iptr이 i를 가리키게 함;
-cptr = &c; //cptr이 c를 가리키게 함;
-iptr2 = iptr; //iptr2가 iptr이 가리키는 곳을 동일하게 가리키게 함;
-
-printf("i : %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
-printf("c : %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
-printf("iptr2 : %p, %i\n", iptr2, *iptr2);
-
-return 0;
+printf("%i, %i, %i\n", i, *pi, *pc);
 }

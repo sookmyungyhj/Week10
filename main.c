@@ -8,6 +8,8 @@ int i;
 int grade[5];
 int a=0;
 
+int *ptr;
+
 for (i=0;i<5;i++){
 printf("input value (%i)= ", i);
 scanf("%d", &grade[i]);
@@ -16,8 +18,10 @@ scanf("%d", &grade[i]);
 for (i=0;i<5;i++)
 printf("grade[%d] = %d\n", i, grade[i]);
 
+ptr = grade;
+
 for (i=0;i<5;i++)
-a += grade[i];
+a += *(ptr+i);
 
 a=a/5;
 

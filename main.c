@@ -3,10 +3,16 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void main(void) {
-int i = 300; //300으로 변경해서도 해보기
-int *pi = &i;
-char *pc = &i;
+void swap (int x, int y) {
+int temp;
+temp = x;
+x = y;
+y = temp;
+}
 
-printf("%i, %i, %i\n", i, *pi, *pc);
+void main(void) {
+int a = 3;
+int b = 5;
+swap(a, b);
+printf("a:%i, b:%i\n", a, b);
 }
